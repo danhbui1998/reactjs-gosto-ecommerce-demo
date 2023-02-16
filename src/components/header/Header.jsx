@@ -1,16 +1,20 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-import './header.scss';
-
 const Header = () => {
     return (
-        <header className="header">
-            <div className="logo"></div>
-            <nav className="navbar">
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/about">About</NavLink>
-                <NavLink to="/contact">Contact</NavLink>
+        <header className="flex justify-between">
+            <div className=""></div>
+            <nav className=" ">
+                <NavLink className={({ isActive }) => (isActive ? 'text-red-600 font-bold' : '')} to="/">
+                    Home
+                </NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-red-600 font-bold' : '')} to="/about">
+                    About
+                </NavLink>
+                <NavLink className={({ isActive }) => (isActive ? 'text-red-600 font-bold' : '')} to="/contact">
+                    Contact
+                </NavLink>
             </nav>
             <Link to="/login">
                 <button>Login</button>

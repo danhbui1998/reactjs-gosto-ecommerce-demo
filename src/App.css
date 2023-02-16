@@ -1,2 +1,7 @@
-@import './styles/css/font.css';
-@import './styles/scss/main.scss';
+@tailwind base;
+
+@layer base {
+    body {
+        @apply font-poppins;
+    }
+}
